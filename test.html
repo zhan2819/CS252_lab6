@@ -1,22 +1,22 @@
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <title>myPoll</title>
+  <title>252 TIPZ</title>
 </head>
-<body class="grey lighten-3">
+<body class="orange lighten-3">
   <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4">
+  <nav class="white">
     <div class="nav-wrapper container">
-        <a href="#" class="brand-logo">
-            <img src="../logo/logo.png" style="width: 70px; margin-top: 10px;">
-          </a>
+      <a href="#" class="brand-logo">
+        <img src="logo/logo.png" style="width: 100px; margin-top: 10px;">
+      </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="logged-in">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-create"> Update Stats</a>
+              <a href="#" class="grey-text modal-trigger" data-target="modal-create">Post tip</a>
             </li>
           <li class="logged-in">
             <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
@@ -24,7 +24,6 @@
           <li class="logged-in">
             <a href="#" class="grey-text" id="logout">Logout</a>
           </li>
-
           <li class="logged-out">
             <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
           </li>
@@ -48,28 +47,10 @@
           <input type="password" id="signup-password" required />
           <label for="signup-password">Choose password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <button class="btn orange lighten-2 z-depth-0">Sign up</button>
       </form>
     </div>
   </div>
-  
-  <!-- CREATE GUIDE MODAL -->
-  <div id="modal-create" class="modal">
-      <div class="modal-content">
-        <h4>Post tips</h4><br />
-        <form id="create-form">
-          <div class="input-field">
-            <input type="text" id="title" required>
-            <label for="title">Topic</label>
-          </div>
-          <div class="input-field">
-            <textarea id="content" class="materialize-textarea" required></textarea>
-            <label for="content">Enter your tips</label>
-          </div>
-          <button class="btn yellow darken-2 z-depth-0">Create</button>
-        </form>
-      </div>
-    </div>
   <!-- LOGIN MODAL -->
   <div id="modal-login" class="modal">
     <div class="modal-content">
@@ -83,7 +64,7 @@
           <input type="password" id="login-password" required />
           <label for="login-password">Your password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <button class="btn orange lighten-2 z-depth-0">Login</button>
       </form>
     </div>
   </div>
@@ -95,6 +76,28 @@
       <div class="account-extras"></div>
     </div>
   </div>
+  <!-- CREATE GUIDE MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Guide</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Guide Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide Content</label>
+        </div>
+        <button class="btn orange lighten-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
+  <!-- GUIDE LIST -->
+  <div class="container" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 tips" style="border: none;">
+    </ul>
+  </div>
   
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
@@ -105,19 +108,19 @@
       apiKey: "AIzaSyB8sXv04XDzMTl3gTNojG9_Bx8Q4mJBYKc",
     authDomain: "cs252l6-mypoll.firebaseapp.com",
     databaseURL: "https://cs252l6-mypoll.firebaseio.com",
-    projectId: "cs252l6-mypoll"
+    projectId: "cs252l6-mypoll",
     };
     firebase.initializeApp(config);
     
     // make auth and firestore references
     const auth = firebase.auth();
-    const database = firebase.firestore();
+    const db = firebase.firestore();
     // update firestore settings
-    database.settings({ timestampsInSnapshots: true });
+    db.settings({ timestampsInSnapshots: true });
   </script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="../script/auth.js"></script>
-  <script src="../script/index.js"></script>
+  <script src="script/auth.js"></script>
+  <script src="script/index.js"></script>
 </body>
 </html>

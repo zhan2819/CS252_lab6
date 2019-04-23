@@ -18,7 +18,23 @@ const setupTips = (data) => {
     });
     tipList.innerHTML = html
   } else {
-    tipList.innerHTML = '<h5 class="center-align">Login to view guides</h5>';
+    let html = '';
+    const li = `
+        
+    <div class="card">
+    <div class="card-header">
+    <h5 class="card-title">A place to upload your study tip for CS252!</h5>
+    <p class="card-text">Log in to view and post tips.</p>
+    </div>
+    <div class="card-body">
+    <img src="../logo/grr.jpg" class="card-img-top" alt="...">
+    </div>
+  </div>
+      
+  
+    `;
+    html += li;
+    tipList.innerHTML = html;
   }
   
 

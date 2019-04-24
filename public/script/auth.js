@@ -4,10 +4,12 @@ auth.onAuthStateChanged(user => {
     console.log('user logged in: ', user);
     db.collection('tips').get().then(snapshot => {
       setupTips(snapshot.docs);
+      getUI(user);
     });
   } else {
     console.log('user logged out');
     setupTips([]);
+    getUI();
   }
 })
 

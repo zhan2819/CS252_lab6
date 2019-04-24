@@ -1,6 +1,17 @@
 // DOM elements
 const tipList = document.querySelector('.tips');
+const logOut = document.querySelectorAll('.logged-out');
+const logIn = document.querySelectorAll('.logged-in');
 
+const getUI = (user) => {
+  if (user) {
+    logIn.forEach(item => item.style.display = 'block');
+    logOut.forEach(item => item.style.display = 'none');
+  } else {
+    logIn.forEach(item => item.style.display = 'none');
+    logOut.forEach(item => item.style.display = 'block');
+  }
+};
 // setup guides
 const setupTips = (data) => {
 

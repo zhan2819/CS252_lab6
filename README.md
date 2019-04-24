@@ -20,6 +20,7 @@ Email: zhan2819@purdue.edu
 Project Name: MyPoll 
 
 Description:  
+
 A website for Purdue CS student to post tips for Class CS 252.
 
  

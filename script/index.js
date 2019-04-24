@@ -6,10 +6,15 @@ const setupTips = (data) => {
 
   if (data.length) {
     let html = '';
-    const l1 = `
+    const lab = `
     <a href="../lab1.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 01: Malloc</a>
+    <a href="../lab2.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 02: Shell Scripting</a>
+    <a href="../lab3.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 03: Shell</a>
+    <a href="../lab4.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 04: Threads</a>
+    <a href="../lab5.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 05: Web Server</a>
+    <a href="../lab6.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 06: Web App</a>
     `; 
-    html += l1;
+    html += lab;
     data.forEach(doc => {
       const tip = doc.data();
       const li = `

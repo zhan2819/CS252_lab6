@@ -1,13 +1,10 @@
 // DOM elements
 const tipList = document.querySelector('.tips');
 
-// setup guides
-const setupTips = (data) => {
-
-  if (data.length) {
+db.collection('tips').get().then((snapshot) => {
     let html = '';
-    data.forEach(doc => {
-      const tip = doc.data();
+    snapshot.docs.forEach(doc => {
+        const tip = doc.data();
       const li = `
         <li>
           <div class="collapsible-header orange lighten-4"> ${tip.topic} </div>
@@ -15,7 +12,24 @@ const setupTips = (data) => {
         </li>
       `;
       html += li;
-    });
+    })
     tipList.innerHTML = html
-  } 
-}
+    console.log(snapshot.docs);
+})
+
+
+
+// setup materialize components
+document.addEventListener('DOMContentLoaded', function() {
+
+  var modals = document.querySelectorAll('.modal');
+  M.Modal.init(modals);
+
+  var items = document.querySelectorAll('.collapsible');
+  M.Collapsible.init(items);
+
+});
+
+$(document).ready(function(){
+  $('select').formSelect();
+})

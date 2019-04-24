@@ -19,7 +19,7 @@ const setupTips = (data) => {
       const tip = doc.data();
       const li = `
         <li>
-          <div class="collapsible-header red lighten-2"> ${tip.topic} </div>
+          <div class="collapsible-header red lighten-2"> Lab ${tip.lab} - ${tip.topic} </div>
           <div class="collapsible-body white"> ${tip.content} </div>
         </li>
       `;

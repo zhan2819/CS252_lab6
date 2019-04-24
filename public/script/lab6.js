@@ -3,6 +3,11 @@ const tipList = document.querySelector('.tips');
 
 db.collection('tips').where('lab','==','6').get().then((snapshot) => {
     let html = '';
+    const lab = `
+    <a class="waves-effect waves-light btn grey darken-2"><i class="material-icons left">collections_bookmark</i>Lab06 Tips</a>
+    <br></br>
+    `; 
+    html += lab; 
     snapshot.docs.forEach(doc => {
         const tip = doc.data();
       const li = `

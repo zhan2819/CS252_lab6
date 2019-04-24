@@ -7,7 +7,7 @@ db.collection('tips').where('lab','==','4').get().then((snapshot) => {
         const tip = doc.data();
       const li = `
         <li>
-          <div class="collapsible-header orange lighten-4"> ${tip.topic} </div>
+          <div class="collapsible-header grey lighten-4"> ${tip.topic} </div>
           <div class="collapsible-body white"> ${tip.content} </div>
         </li>
       `;

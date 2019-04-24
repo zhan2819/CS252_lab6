@@ -1,7 +1,7 @@
 // DOM elements
 const tipList = document.querySelector('.tips');
 
-db.collection('tips').where('lab','==','3').get().then((snapshot) => {
+db.collection('tips').where('lab','==','5').get().then((snapshot) => {
     let html = '';
     snapshot.docs.forEach(doc => {
         const tip = doc.data();
@@ -15,7 +15,7 @@ db.collection('tips').where('lab','==','3').get().then((snapshot) => {
     })
     tipList.innerHTML = html
     console.log(snapshot.docs);
-
+    
 })
 
 

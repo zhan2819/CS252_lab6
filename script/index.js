@@ -6,6 +6,10 @@ const setupTips = (data) => {
 
   if (data.length) {
     let html = '';
+    const l1 = `
+    <a href="../lab1.html" class="waves-effect waves-light btn blue-grey darken-1">Lab 01: Malloc</a>
+    `; 
+    html += l1;
     data.forEach(doc => {
       const tip = doc.data();
       const li = `

@@ -1,4 +1,4 @@
-# myPoll
+# 252Tipz
 CS 252 Lab 6 
 
 
@@ -17,7 +17,7 @@ Name: Junqi Zhang
 Email: zhan2819@purdue.edu 
  
 
-Project Name: MyPoll 
+Project Name: 252Tipz 
 
 Description:  
 

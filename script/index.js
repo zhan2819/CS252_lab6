@@ -50,3 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Collapsible.init(items);
 
 });
+
+$(document).ready(function(){
+  $('select').formSelect();
+})

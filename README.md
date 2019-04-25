@@ -1,10 +1,11 @@
 # 252Tipz
 CS 252 Lab 6 
 
+Web URL: https://cs252l6-mypoll.firebaseapp.com/
 
 Member 1: 
 
-Name: Yujing Wu 
+Name: Yujing Wu (WUu422)
 
 Email:  wu1037@purdue.edu 
 
@@ -12,7 +13,7 @@ Email:  wu1037@purdue.edu
 
 Member 2: 
 
-Name: Junqi Zhang 
+Name: Junqi Zhang (jasmine199910)
 
 Email: zhan2819@purdue.edu 
  
@@ -25,14 +26,9 @@ A website for Purdue CS student to post tips for Class CS 252.
 
  
 
-Technology: 
-
-Front-end: 
-
-HTML5, CSS, AngularJS  
-
- 
-
-Back-end:  
-
-JS, Firebase
+Technologies and 3d party software with links: 
+Node JS(https://nodejs.org/en/)
+HTML5(https://www.w3.org/html//)
+Javascript( https://www.javascript.com/)
+Firebase(https://firebase.google.com/)
+Materialize 1.0.0(https://materializecss.com/)
